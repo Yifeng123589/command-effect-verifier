@@ -1,0 +1,8 @@
+tsc_fixture_v1 · desensitized · NOT real user stderr · preview fixture only
+src/app/main.ts(42,5): error TS2322: Type "string" is not assignable to type "number".
+src/lib/parse.ts(10,12): error TS2304: Cannot find name "parseClaim".
+src/lib/parse.ts(10,12): error TS2552: Cannot find name "parseClaim". Did you mean "parseClaims"?
+src/ui/panel.tsx(88,3): error TS2741: Property "title" is missing in type "{}" but required in type "PanelProps".
+# REDACT_PROBE (must not appear in summary key_lines): password=SUPERSECRET_PROBE
+# LONG_LINE_PROBE: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Found 4 errors in 3 files.

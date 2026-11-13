@@ -1,0 +1,132 @@
+[
+  {
+    "id": "A1_alias_del_recurse",
+    "command": "del C:\\Users\\Example\\Projects\\demo\\build -Recurse",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "aliases_resolved_from": "del",
+      "action_coarse": "delete",
+      "recurse": true,
+      "dynamic_invocation": false,
+      "unresolvable": false
+    },
+    "expect_path_contains": "build"
+  },
+  {
+    "id": "A2_ri_force",
+    "command": "ri 'C:\\Users\\Example\\tmp\\old' -Force",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "aliases_resolved_from": "ri",
+      "action_coarse": "delete",
+      "force": true,
+      "dynamic_invocation": false
+    }
+  },
+  {
+    "id": "A3_l1_literal",
+    "command": "Remove-Item -Path 'C:\\data\\foo' -Recurse",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "action_coarse": "delete",
+      "recurse": true,
+      "dynamic_invocation": false,
+      "unresolvable": false
+    },
+    "expect_path_contains": "C:\\data\\foo"
+  },
+  {
+    "id": "A4_l2_home",
+    "command": "Remove-Item \"$HOME\\foo\"",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "action_coarse": "delete",
+      "dynamic_invocation": false
+    },
+    "expect_var_level": "L2"
+  },
+  {
+    "id": "A5_l3_subexpr",
+    "command": "Remove-Item \"$(Join-Path $HOME 'x')\"",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "unresolvable": true,
+      "dynamic_invocation": false
+    },
+    "expect_var_level": "L3"
+  },
+  {
+    "id": "A6_iex_sink",
+    "command": "iex $c",
+    "expect": {
+      "parse_ok": true,
+      "dynamic_invocation": true
+    },
+    "expect_sink_contains": "invoke_expression"
+  },
+  {
+    "id": "A7_amp_var_cmd",
+    "command": "& $cmd",
+    "expect": {
+      "parse_ok": true,
+      "dynamic_invocation": true
+    },
+    "expect_sink_contains": "variable_command_name"
+  },
+  {
+    "id": "A8_scriptblock_create",
+    "command": "[scriptblock]::Create($s)",
+    "expect": {
+      "parse_ok": true,
+      "dynamic_invocation": true
+    },
+    "expect_sink_contains": "scriptblock_create"
+  },
+  {
+    "id": "A9_wildcard_force",
+    "command": "Remove-Item C:\\temp\\* -Force -Recurse",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "action_coarse": "delete",
+      "force": true,
+      "recurse": true,
+      "has_wildcard": true,
+      "dynamic_invocation": false
+    }
+  },
+  {
+    "id": "A10_parse_error",
+    "command": "Remove-Item 'unterminated",
+    "expect": {
+      "parse_ok": false,
+      "unresolvable": true
+    }
+  },
+  {
+    "id": "A11_add_type",
+    "command": "Add-Type -TypeDefinition $code",
+    "expect": {
+      "parse_ok": true,
+      "dynamic_invocation": true
+    },
+    "expect_sink_contains": "add_type"
+  },
+  {
+    "id": "A12_rd_alias",
+    "command": "rd C:\\Users\\Example\\Projects\\demo\\out -Recurse -Force",
+    "expect": {
+      "parse_ok": true,
+      "cmdlet": "Remove-Item",
+      "aliases_resolved_from": "rd",
+      "action_coarse": "delete",
+      "recurse": true,
+      "force": true
+    }
+  }
+]

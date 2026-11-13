@@ -1,0 +1,10 @@
+{
+  "intent": "删除子表达式路径",
+  "claims": {
+    "action": "delete",
+    "paths": ["C:\\Users\\Example\\x"],
+    "dest": null,
+    "url": null,
+    "recurse": false
+  }
+}

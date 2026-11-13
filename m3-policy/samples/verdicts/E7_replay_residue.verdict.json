@@ -1,0 +1,40 @@
+{
+    "verdict":  "pass",
+    "intent":  "重跑清理项目构建目录",
+    "claims":  {
+                   "action":  "delete",
+                   "paths":  [
+                                 "${CEV_FIXTURE_ROOT}\\build"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  true,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "E7_replay_residue.facts.json",
+    "facts":  {
+                  "action_coarse":  "delete",
+                  "paths":  [
+                                "${CEV_FIXTURE_ROOT}\\build"
+                            ],
+                  "url":  null,
+                  "recurse":  true,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ],
+    "replay":  true,
+    "prior_residue_declared":  false
+}

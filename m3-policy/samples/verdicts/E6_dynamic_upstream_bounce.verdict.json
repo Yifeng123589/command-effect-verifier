@@ -1,0 +1,29 @@
+{
+    "verdict":  "bounce",
+    "intent":  "动态拼接执行",
+    "claims":  {
+                   "action":  "execute",
+                   "paths":  [
+
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  false
+               },
+    "facts_ref":  "A6_iex_sink.json",
+    "mismatches":  [
+                       {
+                           "code":  "DYNAMIC_INVOCATION",
+                           "field":  "dynamic_invocation",
+                           "expected":  false,
+                           "actual":  true,
+                           "detail":  "facts.dynamic_invocation=true"
+                       }
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+                  "e6_upstream_dynamic"
+              ]
+}

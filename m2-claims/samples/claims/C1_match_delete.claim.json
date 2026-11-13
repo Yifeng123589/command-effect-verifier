@@ -1,0 +1,10 @@
+{
+  "intent": "清理项目构建目录",
+  "claims": {
+    "action": "delete",
+    "paths": ["C:\\Users\\Example\\Projects\\demo\\build"],
+    "dest": null,
+    "url": null,
+    "recurse": true
+  }
+}

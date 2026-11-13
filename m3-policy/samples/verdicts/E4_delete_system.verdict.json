@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "清理系统临时目录",
+    "claims":  {
+                   "action":  "delete",
+                   "paths":  [
+                                 "C:\\Windows\\Temp\\cev_m3_sim"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  true,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "E4_delete_system.facts.json",
+    "facts":  {
+                  "action_coarse":  "delete",
+                  "paths":  [
+                                "C:\\Windows\\Temp\\cev_m3_sim"
+                            ],
+                  "url":  null,
+                  "recurse":  true,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

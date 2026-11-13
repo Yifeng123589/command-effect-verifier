@@ -1,0 +1,10 @@
+{
+  "intent": "写入构建目录",
+  "claims": {
+    "action": "write",
+    "paths": ["C:\\Users\\Example\\Projects\\demo\\build"],
+    "dest": null,
+    "url": null,
+    "recurse": true
+  }
+}

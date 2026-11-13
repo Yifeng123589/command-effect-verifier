@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "从 GitHub 克隆示例仓库",
+    "claims":  {
+                   "action":  "fetch",
+                   "paths":  [
+
+                             ],
+                   "dest":  null,
+                   "url":  "https://gitclone.com/github.com/example/repo.git",
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "E3_mirror_fetch.facts.json",
+    "facts":  {
+                  "action_coarse":  "fetch",
+                  "paths":  [
+
+                            ],
+                  "url":  "https://gitclone.com/github.com/example/repo.git",
+                  "recurse":  false,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

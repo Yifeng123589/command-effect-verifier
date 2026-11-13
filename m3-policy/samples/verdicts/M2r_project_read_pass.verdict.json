@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "读取项目根说明文件",
+    "claims":  {
+                   "action":  "read",
+                   "paths":  [
+                                 "${CEV_FIXTURE_ROOT}\\README.txt"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  true,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "M2r_project_read_pass.facts.json",
+    "facts":  {
+                  "action_coarse":  "read",
+                  "paths":  [
+                                "${CEV_FIXTURE_ROOT}\\README.txt"
+                            ],
+                  "url":  null,
+                  "recurse":  false,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

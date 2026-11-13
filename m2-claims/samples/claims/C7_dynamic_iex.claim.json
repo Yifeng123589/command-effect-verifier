@@ -1,0 +1,10 @@
+{
+  "intent": "执行动态表达式",
+  "claims": {
+    "action": "execute",
+    "paths": [],
+    "dest": null,
+    "url": null,
+    "recurse": false
+  }
+}

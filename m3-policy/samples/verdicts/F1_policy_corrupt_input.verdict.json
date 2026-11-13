@@ -1,0 +1,36 @@
+{
+    "verdict":  "pass",
+    "intent":  "策略损坏 fail-closed 探测",
+    "claims":  {
+                   "action":  "read",
+                   "paths":  [
+                                 "${CEV_FIXTURE_ROOT}\\README.txt"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "F1.facts.json",
+    "facts":  {
+                  "action_coarse":  "read",
+                  "paths":  [
+                                "${CEV_FIXTURE_ROOT}\\README.txt"
+                            ],
+                  "url":  null,
+                  "recurse":  false,
+                  "parse_ok":  true
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

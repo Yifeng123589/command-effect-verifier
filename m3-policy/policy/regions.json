@@ -1,0 +1,64 @@
+{
+  "regions": [
+    {
+      "name": "system",
+      "patterns": [
+        "C:\\Windows",
+        "C:\\Windows\\*",
+        "C:\\Program Files",
+        "C:\\Program Files\\*",
+        "C:\\Program Files (x86)",
+        "C:\\Program Files (x86)\\*"
+      ],
+      "priority": 100
+    },
+    {
+      "name": "backup",
+      "patterns": [
+        "${CEV_FIXTURE_ROOT}\\backup",
+        "${CEV_FIXTURE_ROOT}\\backup\\*",
+        "*\\backup\\*",
+        "*\\Backup\\*"
+      ],
+      "priority": 80
+    },
+    {
+      "name": "project_root",
+      "patterns": [
+        "${CEV_FIXTURE_ROOT}",
+        "${CEV_FIXTURE_ROOT}\\*"
+      ],
+      "priority": 60
+    },
+    {
+      "name": "user",
+      "patterns": [
+        "C:\\Users\\Example",
+        "C:\\Users\\Example\\*"
+      ],
+      "priority": 40
+    }
+  ],
+  "network": {
+    "known_hosts": [
+      "github.com",
+      "www.github.com",
+      "raw.githubusercontent.com",
+      "objects.githubusercontent.com",
+      "gitclone.com",
+      "ghproxy.com",
+      "mirror.ghproxy.com"
+    ],
+    "mirror_hosts": [
+      "gitclone.com",
+      "ghproxy.com",
+      "mirror.ghproxy.com"
+    ]
+  },
+  "notes": [
+    "Example preview patterns; deny-list posture. Do not paste production paths here.",
+    "${CEV_FIXTURE_ROOT} is expanded by Apply-CevPolicy.ps1 to this module's fixtures/root (absolute).",
+    "Sample user region is C:\\Users\\Example.",
+    "Known bypass mouths (documented, not fully blocked): 8.3 short names, trailing dots/spaces, UNC, \\\\?\\ prefix"
+  ]
+}

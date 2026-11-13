@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "清理项目构建目录",
+    "claims":  {
+                   "action":  "delete",
+                   "paths":  [
+                                 "C:\\Users\\Example\\Projects\\demo\\build"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  true,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "A1_alias_del_recurse.json",
+    "facts":  {
+                  "action_coarse":  "delete",
+                  "paths":  [
+                                "C:\\Users\\Example\\Projects\\demo\\build"
+                            ],
+                  "url":  null,
+                  "recurse":  true,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

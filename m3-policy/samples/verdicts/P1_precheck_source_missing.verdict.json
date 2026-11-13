@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "删除临时沙箱不存在路径",
+    "claims":  {
+                   "action":  "delete",
+                   "paths":  [
+                                 "${CEV_MODULE_ROOT}\\fixtures\\missing\\no_such_file.txt"
+                             ],
+                   "dest":  null,
+                   "url":  null,
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  true,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "P1_precheck_source_missing.facts.json",
+    "facts":  {
+                  "action_coarse":  "delete",
+                  "paths":  [
+                                "${CEV_MODULE_ROOT}\\fixtures\\missing\\no_such_file.txt"
+                            ],
+                  "url":  null,
+                  "recurse":  false,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

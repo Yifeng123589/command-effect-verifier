@@ -1,0 +1,10 @@
+{
+  "intent": "非法动作枚举",
+  "claims": {
+    "action": "obliterate",
+    "paths": ["C:\\Users\\Example\\Projects\\demo\\build"],
+    "dest": null,
+    "url": null,
+    "recurse": true
+  }
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "C1_match_delete",
+    "claims": "samples/claims/C1_match_delete.claim.json",
+    "facts": "../m1-facts/out/A1_alias_del_recurse.json",
+    "expect": { "verdict": "pass" }
+  },
+  {
+    "id": "C2_path_diverge",
+    "claims": "samples/claims/C2_path_diverge.claim.json",
+    "facts": "../m1-facts/out/A1_alias_del_recurse.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "PATH_MISMATCH",
+    "note": "E1/E2 path divergence"
+  },
+  {
+    "id": "C3_var_path_diverge",
+    "claims": "samples/claims/C3_var_path_diverge.claim.json",
+    "facts": "../m1-facts/out/A4_l2_home.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "PATH_MISMATCH",
+    "note": "E2 variable-expanded path wrong drive"
+  },
+  {
+    "id": "C4_action_mismatch",
+    "claims": "samples/claims/C4_action_mismatch.claim.json",
+    "facts": "../m1-facts/out/A1_alias_del_recurse.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "ACTION_MISMATCH"
+  },
+  {
+    "id": "C5_recurse_mismatch",
+    "claims": "samples/claims/C5_recurse_mismatch.claim.json",
+    "facts": "../m1-facts/out/A1_alias_del_recurse.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "RECURSE_MISMATCH"
+  },
+  {
+    "id": "C6_schema_bad_action",
+    "claims": "samples/claims/C6_schema_bad_action.claim.json",
+    "facts": "../m1-facts/out/A1_alias_del_recurse.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "SCHEMA_INVALID"
+  },
+  {
+    "id": "C7_dynamic_iex",
+    "claims": "samples/claims/C7_dynamic_iex.claim.json",
+    "facts": "../m1-facts/out/A6_iex_sink.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "DYNAMIC_INVOCATION"
+  },
+  {
+    "id": "C8_unresolvable",
+    "claims": "samples/claims/C8_unresolvable.claim.json",
+    "facts": "../m1-facts/out/A5_l3_subexpr.json",
+    "expect": { "verdict": "bounce" },
+    "expect_mismatch_code": "UNRESOLVABLE"
+  }
+]

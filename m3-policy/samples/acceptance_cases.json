@@ -1,0 +1,79 @@
+[
+  {
+    "id": "P1_precheck_source_missing",
+    "verdict": "samples/verdicts/P1_precheck_source_missing.verdict.json",
+    "expect": { "verdict": "bounce" },
+    "expect_rule_substr": "precheck_failed",
+    "note": "precheck source_exists fail"
+  },
+  {
+    "id": "P2_precheck_dest_parent_missing",
+    "verdict": "samples/verdicts/P2_precheck_dest_parent_missing.verdict.json",
+    "expect": { "verdict": "bounce" },
+    "expect_rule_substr": "precheck_failed",
+    "note": "precheck dest_parent_exists fail"
+  },
+  {
+    "id": "P3_m2_bounce_passthrough",
+    "verdict": "samples/verdicts/P3_m2_bounce_passthrough.verdict.json",
+    "expect": { "verdict": "bounce" },
+    "expect_rule_substr": "m2_bounce_passthrough",
+    "note": "M2 bounce must not be upgraded to pass"
+  },
+  {
+    "id": "E3_mirror_fetch",
+    "verdict": "samples/verdicts/E3_mirror_fetch.verdict.json",
+    "expect": { "verdict": "pass" },
+    "expect_notice_code": "MIRROR_URL",
+    "note": "E3 known mirror + notice"
+  },
+  {
+    "id": "E4_delete_system",
+    "verdict": "samples/verdicts/E4_delete_system.verdict.json",
+    "expect": { "verdict": "block" },
+    "expect_rule_substr": "system",
+    "note": "E4 system delete block"
+  },
+  {
+    "id": "E5_unknown_domain",
+    "verdict": "samples/verdicts/E5_unknown_domain.verdict.json",
+    "expect": { "verdict": "human" },
+    "expect_rule_substr": "evil-unknown-cdn.example",
+    "note": "E5 unknown host human"
+  },
+  {
+    "id": "E6_dynamic_upstream_bounce",
+    "verdict": "samples/verdicts/E6_dynamic_upstream_bounce.verdict.json",
+    "expect": { "verdict": "bounce" },
+    "expect_rule_substr": "m2_bounce_passthrough",
+    "note": "E6 dynamic already bounced"
+  },
+  {
+    "id": "E7_replay_residue",
+    "verdict": "samples/verdicts/E7_replay_residue.verdict.json",
+    "expect": { "verdict": "bounce" },
+    "expect_rule_substr": "replay_residue_undeclared",
+    "note": "E7 replay without residue declare"
+  },
+  {
+    "id": "M1_user_delete_human",
+    "verdict": "samples/verdicts/M1_user_delete_human.verdict.json",
+    "expect": { "verdict": "human" },
+    "expect_rule_substr": "user",
+    "note": "user x delete -> human"
+  },
+  {
+    "id": "M2r_project_read_pass",
+    "verdict": "samples/verdicts/M2r_project_read_pass.verdict.json",
+    "expect": { "verdict": "pass" },
+    "note": "project_root x read + precheck ok -> pass"
+  },
+  {
+    "id": "F1_policy_corrupt",
+    "verdict": "samples/verdicts/F1_policy_corrupt_input.verdict.json",
+    "corrupt_policy": true,
+    "expect": { "verdict": "human" },
+    "expect_rule_substr": "fail_closed",
+    "note": "corrupt policy fail-closed -> human"
+  }
+]

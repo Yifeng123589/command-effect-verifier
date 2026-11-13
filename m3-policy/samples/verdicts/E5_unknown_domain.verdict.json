@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "从 GitHub 下载工具",
+    "claims":  {
+                   "action":  "fetch",
+                   "paths":  [
+
+                             ],
+                   "dest":  null,
+                   "url":  "https://evil-unknown-cdn.example/payload.bin",
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  null
+                                     }
+               },
+    "facts_ref":  "E5_unknown_domain.facts.json",
+    "facts":  {
+                  "action_coarse":  "fetch",
+                  "paths":  [
+
+                            ],
+                  "url":  "https://evil-unknown-cdn.example/payload.bin",
+                  "recurse":  false,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

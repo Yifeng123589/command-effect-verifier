@@ -1,0 +1,38 @@
+{
+    "verdict":  "pass",
+    "intent":  "写入不存在父目录",
+    "claims":  {
+                   "action":  "write",
+                   "paths":  [
+                                 "${CEV_MODULE_ROOT}\\fixtures\\missing_parent\\child.txt"
+                             ],
+                   "dest":  "${CEV_MODULE_ROOT}\\fixtures\\missing_parent\\child.txt",
+                   "url":  null,
+                   "recurse":  false,
+                   "preconditions":  {
+                                         "source_exists":  null,
+                                         "dest_parent_exists":  true
+                                     }
+               },
+    "facts_ref":  "P2_precheck_dest_parent_missing.facts.json",
+    "facts":  {
+                  "action_coarse":  "write",
+                  "paths":  [
+                                "${CEV_MODULE_ROOT}\\fixtures\\missing_parent\\child.txt"
+                            ],
+                  "url":  null,
+                  "recurse":  false,
+                  "parse_ok":  true,
+                  "dynamic_invocation":  false,
+                  "unresolvable":  false
+              },
+    "mismatches":  [
+
+                   ],
+    "notices":  [
+
+                ],
+    "notes":  [
+
+              ]
+}

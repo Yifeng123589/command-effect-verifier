@@ -1,0 +1,51 @@
+{
+  "actions_map": {
+    "read": "read",
+    "copy_out": "read",
+    "write": "write",
+    "copy_in": "write",
+    "delete": "delete",
+    "execute": "execute",
+    "build": "execute",
+    "fetch": "fetch"
+  },
+  "verdict_rank": {
+    "pass": 0,
+    "bounce": 1,
+    "human": 2,
+    "block": 3
+  },
+  "matrix": {
+    "system": {
+      "read": "pass",
+      "write": "human",
+      "delete": "block",
+      "execute": "block"
+    },
+    "user": {
+      "read": "pass",
+      "write": "pass",
+      "delete": "human",
+      "execute": "pass"
+    },
+    "backup": {
+      "read": "pass",
+      "write": "pass",
+      "delete": "human",
+      "execute": "human"
+    },
+    "project_root": {
+      "read": "pass",
+      "write": "pass",
+      "delete": "pass",
+      "execute": "human"
+    }
+  },
+  "network": {
+    "known_mirror": "pass",
+    "known_official": "pass",
+    "unknown": "human"
+  },
+  "default_unmatched": "pass",
+  "fail_closed_verdict": "human"
+}

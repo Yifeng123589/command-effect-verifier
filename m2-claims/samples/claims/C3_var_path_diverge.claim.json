@@ -1,0 +1,10 @@
+{
+  "intent": "删除用户目录下 foo",
+  "claims": {
+    "action": "delete",
+    "paths": ["D:\\Users\\Example\\foo"],
+    "dest": null,
+    "url": null,
+    "recurse": false
+  }
+}
